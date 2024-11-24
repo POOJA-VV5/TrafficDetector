@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Traffic Result</title>
+</head>
+<body>
+    <h1>Traffic Result</h1>
+    <h3>From: <span th:text="${origin}"></span> To: <span th:text="${destination}"></span></h3>
+
+    <h3>Traffic Levels:</h3>
+    <div th:each="trafficDetail : ${trafficDetails}">
+        <p th:text="${trafficDetail.description}"></p>
+    </div>
+
+    <h3>Best Route:</h3>
+    <p th:text="${bestRoute}"></p>
+
+    <h3>Map:</h3>
+    <img th:src="${mapImage}" alt="Map Image" />
+
+    <br><br>
+    <a href="/">Check Another Route</a>
+</body>
+</html>
+
+
