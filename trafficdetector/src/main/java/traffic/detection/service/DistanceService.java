@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 public class DistanceService {
 
     private final RestTemplate restTemplate = new RestTemplate();
-    private final String apiKey = "AIzaSyCAPBj6R29p4PUqLrIFIQqaDC9F6jo0vTo"; // Replace with your actual key
+    private final String apiKey = "YOUR_API_KEY"; // Replace with your actual key
     private final String apiUrl = "https://maps.googleapis.com/maps/api/distancematrix/json";
 
     public String getTrafficSeverity(String origin, String destination, String departure_time) {
